@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: ModernAppliances, Configuration: Debug|AnyCPU ------
+1>C:\Program Files\dotnet\sdk\8.0.100\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: Assets file 'C:\Users\garth\Source\Repos\HalidaysNewestWizard\ModernAppliancesAssignment\A1ModernAppliances\obj\project.assets.json' not found. Run a NuGet package restore to generate this file.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+Build failed.
