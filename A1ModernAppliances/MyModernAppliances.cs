@@ -129,7 +129,15 @@ namespace ModernAppliances
             // Refrigerator refrigerator = (Refrigerator) appliance;
             foreach (Appliance appliance in Appliances)
             {
-                Refrigerator refrigerator = (Refrigerator) appliance;
+                Refrigerator refrigerator;
+                try
+                {
+                    refrigerator = (Refrigerator) appliance;
+                }
+                catch
+                {
+                    continue;
+                }
                 if(refrigerator.Doors == doors)
                 {
                     list.Add(refrigerator);
@@ -158,9 +166,9 @@ namespace ModernAppliances
             // Write "1 - Residential"
             // Write "2 - Commercial"
             Console.WriteLine("Possible options:\n0 - Any\n1 - Resedential\n2 - Commercial");
-            
+
             // Write "Enter grade:"
-            Console.WriteLine(" Enter Grade :")
+            Console.WriteLine(" Enter Grade :");
             // Get user input as string and assign to variable
             string grade;
             // Create grade variable to hold grade to find (Any, Residential, or Commercial)
@@ -209,12 +217,16 @@ namespace ModernAppliances
             // Loop through Appliances
             foreach( Appliance appliance in Appliances) 
             {
-                Vacuum vacuum = (Vacuum) appliance;
-                if
+                Vacuum vacuum;
+                try
                 {
-                    foundlist.Add(vacuum);
-                
+                    vacuum = (Vacuum) appliance;
                 }
+                catch
+                {
+                    continue;
+                }
+                foundlist.Add(vacuum);
             }
             // Check if current appliance is vacuum
             // Down cast current Appliance to Vacuum object
@@ -234,14 +246,14 @@ namespace ModernAppliances
         public override void DisplayMicrowaves()
         {
             // Write "Possible options:"
-            Console.WriteLine("Possible options :\n0 - Any\n1 - Kitchen\n2 - Work site")
+            Console.WriteLine("Possible options :\n0 - Any\n1 - Kitchen\n2 - Work site");
 
             // Write "0 - Any"
             // Write "1 - Kitchen"
             // Write "2 - Work site"
 
             // Write "Enter room type:"
-             Console.WriteLine("Enter room type:")
+            Console.WriteLine("Enter room type:");
             // Get user input as string and assign to variable
             int room;
             // Create character variable that holds room type
@@ -261,8 +273,17 @@ namespace ModernAppliances
             var found = new List<Appliance>();
             // Loop through Appliances
             foreach ( Appliance appliance in Appliances)
-                Microwave microwave= (Microwave) appliance;
             {
+                Microwave microwave;
+                try
+                {
+                    microwave = (Microwave) appliance;
+                }
+                catch
+                {
+                    continue;
+                }
+
                 found.Add(appliance);
             }
                 // Test current appliance is Microwave
